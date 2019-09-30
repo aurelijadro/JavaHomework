@@ -7,7 +7,7 @@ public class JavaOperators {
 		// checkRelational();
 		// checkLogical();
 		// checkAssignment();
-		// checkBitwise(); 
+		 checkBitwise(); 
 		
 	}
 

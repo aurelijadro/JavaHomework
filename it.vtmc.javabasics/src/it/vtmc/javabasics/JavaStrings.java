@@ -1,13 +1,18 @@
 package it.vtmc.javabasics;
 
 import java.util.Arrays;
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.StringJoiner;
+import java.util.StringTokenizer;
 
 public class JavaStrings {
 	// immutable, char'u masyvas
-	
+	private static Scanner input = new Scanner(System.in);
 	static String name = "Petras";
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		newName();
 		name = "Tomas"; // negalima keisti nesukurus 
 						//naujo objekto
@@ -28,9 +33,20 @@ public class JavaStrings {
 		
 		System.out.println(test.toCharArray());
 		
-		stringBuilder();
-		mathRunner();
-		arrayRunner();
+		//stringBuilder();
+		//mathRunner();
+		//arrayRunner();
+		//nauji:
+		//compareStrings();
+		//trimStrings();
+		//splitStrings();
+		//indexString();
+		//subString();
+		//containsString(); //read about contains - wild cards!
+		//concatenateString();
+		//joinString();
+		//valueOfString();
+		stringTokenizer();
 		
 		
 	}
@@ -76,4 +92,80 @@ public class JavaStrings {
 		intMatrix2 [0][1] = 45;
 		System.out.println(Arrays.deepToString(intMatrix2));
 	}
+	
+		private static void compareStrings() {
+			System.out.println("Input name");
+			String result = input.next().toLowerCase();
+			System.out.println(result.equals("Tomas".toLowerCase()));
+			String name = null;
+			System.out.println(result.contentEquals(name));// false
+			String str1 ="Taki";
+			String str2 ="TAKI";
+			System.out.println(str1.toLowerCase().contentEquals(str2.toLowerCase()));
+			Locale locale = Locale.forLanguageTag("tr-TR");
+			System.out.println(str1.toLowerCase(locale).equals(str2.toLowerCase(locale)));
+		}
+		
+		private static void trimStrings() {
+			String text = "      This is a long string ...       ";
+			System.out.println(text.trim());
+		}		
+		private static void splitStrings() {
+			String text = "      This is a long string ...       ";
+			String [] words = text.split(" "); //grazina masyva
+			System.out.println(Arrays.toString(words)); 
+		}
+		
+		private static void indexString() {
+			String text = "      This is a long string ...       ";
+			System.out.println(text.charAt(9));
+			System.out.println(text.replace('i', 'o'));
+		}
+		
+		private static void subString() {
+			String text = "      This is a long string ...       ";
+			System.out.println(text.substring(9));
+			System.out.println(text.substring(9, 15));
+		}
+		
+		private static void containsString() {
+			String text = "      This is a long string ...       ";
+			System.out.println(text.contains("long"));
+			//System.out.println(text.matches("??is"));
+		}
+		
+		private static void concatenateString() {
+			String text = "      This is a long string ...       ";
+			System.out.println(text.concat("lalalalalala"));
+		}
+		
+		private static void joinString() {
+			String [] names = {"Tadas", "Tomas", "Petras"};
+			String singleString = String.join(", ", names);
+			System.out.println(singleString);
+			
+			StringJoiner joiner = new StringJoiner(", "); //better!
+			joiner.add(names[0]);
+			joiner.add(names[1]);
+			joiner.add(names[2]);
+			System.out.println(joiner);
+		}
+		
+		private static void valueOfString() { // bet ka keicia i STRING
+			String text = String.valueOf(input.next());
+			int num = 12;
+			String text2 = String.valueOf(num);
+			System.out.println(text2 instanceof String);
+			
+		}
+		
+		private static void stringTokenizer() {
+			String text = "Little text for string tokenizer";
+			StringTokenizer tokens = new StringTokenizer(text);
+			while(tokens.hasMoreTokens()) {
+				System.out.println(tokens.nextToken());
+			}
+			
+			
+		}
 }

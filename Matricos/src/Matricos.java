@@ -3,7 +3,7 @@ public class Matricos {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		matrix1();
+		matrix1(); 
 		System.out.println();
 		matrix2();
 		System.out.println();

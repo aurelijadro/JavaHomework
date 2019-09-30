@@ -6,23 +6,23 @@ public class JavaPd9 {
 
 	public static void main(String[] args) {
 		// 9.1 check if triangle is rectangled
-		// isRectangled();
+		isRectangled();
 		// 9.2 find discriminant for quadratic equation
-		// findDiscriminant();
+		findDiscriminant();
 		// 9.3 guess random num from 0 to 100
-		// guessTheNumber();
+		guessTheNumber();
 		// 9.4 y=3x, x = (0 --> 10) use if
-		//solveEquation();
+		solveEquation();
 		// 9.5 y=3x, x = (0 --> 10) use while
-		//solveEquation2();
+		solveEquation2();
 		// 9.6 sum numbers from 1 to 100, use for
-		//sumNumbers(1,100);
+		sumNumbers(1, 100);
 		// 9.7 sum numbers from 1 to 100, use while
-		//sumNumbers2(1,100);
+		sumNumbers2(1, 100);
 		// 9.8 sum numbers from 1 to 100, use do while
-		//sumNumbers3(1,100);
+		sumNumbers3(1, 100);
 		// 9.9 prints capital letters from A to Z use for
-		// printCapitalLetters();
+		printCapitalLetters();
 		// 9.10 print multiplication table for numbers from 1 to 100
 		printMultiplicationTable();
 	}
@@ -126,46 +126,47 @@ public class JavaPd9 {
 		}
 
 	}
-	
-	private static void sumNumbers (int start, int end) {
+
+	private static void sumNumbers(int start, int end) {
 		int sum = 0;
-		for (int i= start; i <= end; i++) {
-			sum+=i;
+		for (int i = start; i <= end; i++) {
+			sum += i;
 		}
-		System.out.println("Sum of all integer numbers from " + start + " to " + end + " is: " +sum);
+		System.out.println("Sum of all integer numbers from " + start + " to " + end + " is: " + sum);
 	}
-	
-	private static void sumNumbers2 (int start, int end) {
+
+	private static void sumNumbers2(int start, int end) {
 		int sum = 0;
 		int i = start;
-		while(i<=end) {
-			sum+=i;
+		while (i <= end) {
+			sum += i;
 			i++;
 		}
-		System.out.println("Sum of all integer numbers from " + start + " to " + end + " is: " +sum);
+		System.out.println("Sum of all integer numbers from " + start + " to " + end + " is: " + sum);
 	}
-	
-	private static void sumNumbers3 (int start, int end) {
+
+	private static void sumNumbers3(int start, int end) {
 		int sum = 0;
 		int i = start;
 		do {
-			sum+=i;
+			sum += i;
 			i++;
-		} while (i<=(end));
-		System.out.println("Sum of all integer numbers from " + start + " to " + end + " is: " +sum);
+		} while (i <= (end));
+		System.out.println("Sum of all integer numbers from " + start + " to " + end + " is: " + sum);
 	}
-	
+
 	private static void printCapitalLetters() {
-		for (int charVal = 65; charVal<=90; charVal++) {
-			System.out.print((char)(charVal)+" ");
+		for (int charVal = 65; charVal <= 90; charVal++) {
+			System.out.print((char) (charVal) + " ");
 		}
 	}
-	
+
 	private static void printMultiplicationTable() {
-		for (int firstArg = 1; firstArg<=100; firstArg++) {
-			for (int secondArg = 1; secondArg <=100; secondArg++) {
-				System.out.print(firstArg + "*" + secondArg + "=" + (firstArg*secondArg)+" | ");
-			} System.out.println();
+		for (int firstArg = 1; firstArg <= 100; firstArg++) {
+			for (int secondArg = 1; secondArg <= 100; secondArg++) {
+				System.out.print(firstArg + "*" + secondArg + "=" + (firstArg * secondArg) + " | ");
+			}
+			System.out.println();
 		}
 	}
 }
