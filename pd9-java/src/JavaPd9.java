@@ -82,7 +82,14 @@ public class JavaPd9 {
 		System.out.println("Quadratic quation = ax^2+bx+c. Please provide argument \"c\":");
 		double c = myObj.nextDouble();
 		double discriminant = roundNumber(Math.pow(b, 2) - 4 * a * c);
-		System.out.println("Discriminant for equation " + a + "x^2+" + b + "x+" + c + "=0 is: " + discriminant);
+		if (discriminant == 0) {
+			System.out.println("Discriminant for equation " + a + "x^2+" + b + "x+" + c + "=0 is: " + discriminant +". Equation has one solution.");
+		} else if (discriminant > 0) {
+			System.out.println("Discriminant for equation " + a + "x^2+" + b + "x+" + c + "=0 is: " + discriminant +". Equation has two solutions.");
+		} else {
+			System.out.println("Discriminant for equation " + a + "x^2+" + b + "x+" + c + "=0 is: " + discriminant +". Solutions for this equation are not real numbers.");
+		}
+		
 	}
 
 	private static double roundNumber(double num) {
