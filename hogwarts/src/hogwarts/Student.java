@@ -1,4 +1,4 @@
-package ObjectiveProgramming;
+package hogwarts;
 // kol nera nei vieno konstruktoriaus, yra sukuriamas default'inis konstruktorius
 
 
